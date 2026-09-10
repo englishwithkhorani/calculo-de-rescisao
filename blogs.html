@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<!-- favicon logo ka source code ha ye  -->
+<script src="favicon.js"></script>
+<!-- favicon logo ka source code ha ye  -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog e FAQ - Calculo de Rescisao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @keyframes borderGlow {
+            0% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 0 15px rgba(0, 242, 254, 0.1); }
+            50% { border-color: rgba(79, 172, 254, 0.6); box-shadow: 0 0 25px rgba(0, 242, 254, 0.3); }
+            100% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 0 15px rgba(0, 242, 254, 0.1); }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 50%, rgba(15, 23, 42, 0.98) 100%);
+            color: #f8fafc;
+            border: 1px solid rgba(0, 242, 254, 0.4);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 242, 254, 0.25) inset, 0 1px 2px rgba(255, 255, 255, 0.2) inset;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.8), transparent);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
+            z-index: 10;
+        }
+
+        .main-wrapper {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .blog-header::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            border-radius: 2px;
+            box-shadow: 0 0 10px #00f2fe;
+        }
+
+        .blog-header h1 {
+            font-size: 38px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+            text-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+        }
+
+        .blog-header p {
+            color: #90e0ef;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .blog-card {
+            background: linear-gradient(135deg, rgba(27, 38, 59, 0.8), rgba(13, 27, 42, 0.9));
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(0, 242, 254, 0.8);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 242, 254, 0.4);
+            animation: borderGlow 3s infinite ease-in-out;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 210px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-image {
+            transform: scale(1.1);
+        }
+
+        .blog-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-date {
+            font-size: 11.5px;
+            color: #00f2fe;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+        }
+
+        .blog-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
+
+        .blog-card:hover .blog-title {
+            color: #00f2fe;
+        }
+
+        .blog-excerpt {
+            font-size: 13.5px;
+            color: #a0c4df;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .read-more-btn {
+            align-self: flex-start;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            color: #00f2fe;
+            padding: 10px 20px;
+            border: 1px solid rgba(0, 242, 254, 0.5);
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), rgba(79, 172, 254, 0.1));
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .read-more-btn:hover {
+            background: linear-gradient(135deg, #00f2fe, #4facfe);
+            color: #0d1b2a;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.8);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header yahan load hoga -->
+    <div id="header-container"></div>
+
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="blog-header">
+                <h1>Blogs and FAQ</h1>
+                <p>Fique por dentro das principais dicas e leis sobre Rescisão Trabalhista</p>
+            </div>
+
+            <div class="blog-grid" id="blogGrid"></div>
+        </div>
+    </div>
+
+    <!-- Footer yahan load hoga -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Header load karne ke liye
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Footer load karne ke liye
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+
+        // Posts data with correct clean hyphenated links matching physical files
+        const posts = [
+            {
+                title: "Artigo 769 da CLT: Entenda a Aplicação subsidiária",
+                date: "05 de Junho, 2026",
+                image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Saiba como funciona a aplicação subsidiária das normas do processo civil no direito processual do trabalho.",
+                link: "art-769-da-clt.html"
+            },
+            {
+                title: "Desvio de Função na CLT: Quais são os seus direitos?",
+                date: "28 de Maio, 2026",
+                image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Entenda o que caracteriza o desvio de função e como o trabalhador pode requerer diferenças salariais.",
+                link: "clt-desvio-de-funcao.html"
+            },
+            {
+                title: "Intervalo de 15 minutos para lanche na CLT",
+                date: "15 de Maio, 2026",
+                image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Descubra as regras sobre a concessão do intervalo intrajornada para jornadas de trabalho específicas.",
+                link: "intervalo-de-15min-para-lanche-clt.html"
+            },
+            {
+                title: "O Artigo 444 da CLT e a Livre Negociação",
+                date: "10 de Maio, 2026",
+                image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Compreenda os limites e as diretrizes da livre estipulação contratual entre empregado e empregador.",
+                link: "artigo-444-da-clt.html"
+            },
+            {
+                title: "Qual a tolerância de atraso pela CLT?",
+                date: "02 de Maio, 2026",
+                image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Saiba exatamente quantos minutos de tolerância a legislação trabalhista permite no registro de ponto.",
+                link: "qual-a-tolerancia-de-atraso-clt.html"
+            },
+            {
+                title: "Refinanciamento Consignado CLT Facta",
+                date: "25 de Abril, 2026",
+                image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Informações detalhadas sobre as opções e regras de refinanciamento de crédito consignado.",
+                link: "refinanciamento-consignado-clt-facta.html"
+            },
+            {
+                title: "Registro CLT vs PJ: Diferenças e Impactos",
+                date: "18 de Abril, 2026",
+                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Analise as vantagens, desvantagens e implicações legais da contratação via CLT em comparação ao modelo PJ.",
+                link: "registro-clt-vs-pj.html"
+            },
+            {
+                title: "Via Capital – Sociedade de Crédito Direto",
+                date: "20 de Março, 2026",
+                image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+                excerpt: "Conheça mais sobre as soluções financeiras e parcerias institucionais integradas.",
+                link: "via-capital-sociedade-de-credito-direto.html"
+            }
+        ];
+
+        function loadBlogPosts() {
+            const gridContainer = document.getElementById('blogGrid');
+            let htmlContent = '';
+
+            posts.forEach(post => {
+                htmlContent += `
+                    <div class="blog-card">
+                        <div class="image-container">
+                            <img src="${post.image}" alt="${post.title}" class="blog-image">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date">${post.date}</span>
+                            <h3 class="blog-title">${post.title}</h3>
+                            <p class="blog-excerpt">${post.excerpt}</p>
+                            <a href="${post.link}" class="read-more-btn">Ler Artigo</a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            gridContainer.innerHTML = htmlContent;
+        }
+
+        window.onload = loadBlogPosts;
+    </script>
+</body>
+</html>

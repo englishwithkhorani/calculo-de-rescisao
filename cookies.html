@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<!-- favicon logo ka source code ha ye  -->
+<script src="favicon.js"></script>
+<!-- favicon logo ka source code ha ye  -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Cookies - Calculo de Rescisao Trabalhista</title>
+    <!-- On-Page SEO Meta Description -->
+    <meta name="description" content="Conheça nossa política de cookies e entenda como utilizamos tecnologias de navegação e ferramentas analíticas em nosso site de cálculos trabalhistas.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculoderescisão.com/cookies.html">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        neon: {
+                            cyan: '#00f2fe',
+                            blue: '#4facfe',
+                            violet: '#8b5cf6',
+                            gold: '#fbbf24',
+                            dark: '#070b14',
+                            card: '#0f172a',
+                            border: 'rgba(0, 242, 254, 0.3)'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --bg-deep: #070b14;
+            --card-surface: rgba(15, 23, 42, 0.85);
+            --card-surface-solid: #0f172a;
+            --neon-cyan: #00f2fe;
+            --neon-blue: #4facfe;
+            --neon-violet: #8b5cf6;
+            --border-glow: rgba(0, 242, 254, 0.4);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 50% -20%, #1e1b4b 0%, #070b14 65%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 28px 16px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Efeito de Cursor Shadow Glow (Luz Seguidora do Mouse) */
+        #cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 450px;
+            height: 450px;
+            margin-top: -225px;
+            margin-left: -225px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(139, 92, 246, 0.08) 45%, transparent 70%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.08s ease-out;
+            will-change: transform;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 900px;
+            height: 400px;
+            background: linear-gradient(90deg, rgba(0, 242, 254, 0.18), rgba(139, 92, 246, 0.18));
+            filter: blur(140px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        #header-container, #footer-container {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            background: var(--card-surface);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 28px;
+            padding: 50px 40px;
+            margin: 22px 0;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 40px rgba(0, 242, 254, 0.08);
+            border: 1px solid var(--border-glow);
+            position: relative;
+        }
+
+        .page-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+            box-shadow: 0 0 15px var(--neon-cyan);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .main-heading {
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1.25;
+            color: #ffffff;
+            margin-bottom: 18px;
+            letter-spacing: -0.8px;
+        }
+
+        .main-subtext {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .content-block {
+            background: rgba(11, 18, 32, 0.75);
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 25px;
+        }
+
+        .content-block h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #00f2fe;
+            margin-bottom: 15px;
+        }
+
+        .content-block p, .content-block li {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 12px;
+        }
+
+        .content-block ul {
+            padding-left: 20px;
+            list-style-type: disc;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper {
+                padding: 30px 18px;
+            }
+            .main-heading {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Elemento do Cursor Shadow / Glow -->
+    <div id="cursor-glow"></div>
+
+    <div id="header-container"></div>
+
+    <main class="page-wrapper">
+        <div class="section-header">
+            <h1 class="main-heading">
+                Política de <span style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Cookies</span>
+            </h1>
+            <p class="main-subtext">
+                Saiba como utilizamos cookies e tecnologias semelhantes em nossa plataforma para garantir a melhor experiência de navegação e uso das ferramentas de cálculo.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h2>1. O que são Cookies?</h2>
+            <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo (computador, tablet ou smartphone) quando você visita um site. Eles são amplamente utilizados para fazer os sites funcionarem de forma mais eficiente, bem como para fornecer informações aos proprietários do site.</p>
+        </div>
+
+        <div class="content-block">
+            <h2>2. Como utilizamos os Cookies?</h2>
+            <p>Como nosso site é voltado para cálculos trabalhistas e leitura de artigos informativos sem exigência de cadastro ou armazenamento de dados pessoais sensíveis, utilizamos apenas recursos essenciais:</p>
+            <ul>
+                <li><strong>Cookies de Sessão e Desempenho:</strong> Auxiliam no funcionamento correto das páginas e na velocidade de carregamento através de redes de distribuição de conteúdo (como Cloudflare).</li>
+                <li><strong>Métricas e Análises (Opcional):</strong> Ferramentas de estatística anônima podem ser empregadas para entender quais calculadoras são mais acessadas, ajudando a aprimorar nossos serviços sem identificar o usuário individualmente.</li>
+            </ul>
+        </div>
+
+        <div class="content-block">
+            <h2>3. Cookies de Terceiros</h2>
+            <p>Em algumas páginas, podemos exibir conteúdos ou ferramentas de parceiros que também utilizam cookies próprios. Não temos controle direto sobre os cookies de serviços externos de terceiros (como redes sociais ou plataformas de anúncios futuros).</p>
+        </div>
+
+        <div class="content-block">
+            <h2>4. Como gerenciar ou desativar os Cookies?</h2>
+            <p>Você pode controlar e/ou excluir cookies conforme desejar diretamente nas configurações do seu navegador. É possível apagar todos os cookies já armazenados e configurar a maioria dos navegadores para bloqueá-los. No entanto, desativar determinados cookies pode afetar a interatividade de algumas áreas do site.</p>
+            <p>Para gerenciar os cookies no seu navegador preferido, consulte as seções de ajuda do Google Chrome, Mozilla Firefox, Safari ou Microsoft Edge.</p>
+        </div>
+
+        <div class="content-block" style="margin-bottom: 0;">
+            <h2>5. Atualizações desta Política</h2>
+            <p>Esta Política de Cookies pode ser atualizada periodicamente para refletir melhorias técnicas ou adequações legais. Recomendamos que você revise esta página regularmente para se manter informado.</p>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- Script do Cursor Glow -->
+    <script>
+        const cursorGlow = document.getElementById('cursor-glow');
+        window.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            cursorGlow.style.transform = `translate(${x}px, ${y}px)`;
+        });
+
+        // Header Loader
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                const container = document.getElementById('header-container');
+                container.innerHTML = data;
+                const scripts = container.querySelectorAll('script');
+                scripts.forEach(script => {
+                    const newScript = document.createElement('script');
+                    if (script.src) newScript.src = script.src;
+                    else newScript.textContent = script.textContent;
+                    document.body.appendChild(newScript);
+                });
+            });
+
+        // Footer Loader
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
