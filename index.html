@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- favicon logo ka source code ha ye -->
-    <script src="/favicon.js"></script>
+<!-- favicon logo ka source code ha ye  -->
+<script src="/favicon.js"></script>
+<!-- favicon logo ka source code ha ye  -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculo de Rescisão - 1 Calculadora de Rescisão de Contrato de Trabalho - CLT</title>
+   <title>Calculo de Rescisão - 1 Calculadora de Rescisão de Contrato de Trabalho - CLT</title>
     <!-- On-Page SEO Meta Description -->
     <meta name="description" content="Quer saber quanto vai receber no seu desligamento? Utilize nossa ferramenta gratuita de calculo de rescisao trabalhista atualizada para a CLT 2026. Simule com precisão absoluta o saldo de salário, aviso prévio proporcional, 13º salário, férias vencidas e proporcionais, além da multa do FGTS. Evite prejuízos financeiros na rescisão do seu contrato de trabalho, entenda seus direitos de forma simples e rápida com nosso simulador online completo e confiável desenvolvido pela Scoby Digital.">
     <meta name="robots" content="index, follow">
@@ -99,7 +100,7 @@
             pointer-events: none;
         }
 
-        .site-container {
+        #header-container, #footer-container {
             width: 100%;
             max-width: 1200px;
         }
@@ -448,18 +449,7 @@
     <!-- Elemento do Cursor Shadow / Glow -->
     <div id="cursor-glow"></div>
 
-    <div class="site-container" id="header-container">
-        <!-- Embedded Header Content -->
-        <header style="padding: 20px 0; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
-            <a href="/" style="font-size: 20px; font-weight: 900; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 8px;">
-                <span style="color: #00f2fe;">Calculo de Rescisão</span>
-            </a>
-            <nav style="display: flex; gap: 20px;">
-                <a href="#calculo" style="color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s;">Calculadora</a>
-                <a href="#blogs-faq" style="color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 600; transition: color 0.2s;">FAQ & Guias</a>
-            </nav>
-        </header>
-    </div>
+    <div id="header-container"></div>
 
     <!-- HTML SECTION 1: CALCULATOR & RESULTS BLOCK -->
     <main class="calculator-page-wrapper">
@@ -1198,13 +1188,6 @@
         </div>
     </section>
 
-    <div class="site-container" id="footer-container">
-        <!-- Embedded Footer Content -->
-        <footer style="margin-top: 40px; padding: 25px 0; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.08); color: #94a3b8; font-size: 13px;">
-            <p>&copy; 2026 Calculo de Rescisão. Todos os direitos reservados. Desenvolvido com foco na legislação CLT.</p>
-        </footer>
-    </div>
-
     <!-- Functional JavaScript Calculation Engine -->
     <script>
         // Script para movimentar o Cursor Glow suavemente com o mouse
@@ -1409,6 +1392,40 @@
                 });
             });
         });
+    </script>
+
+    <div id="footer-container"></div>
+
+    <script>
+        // Header Loader with Absolute Path
+        fetch('/header.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Header load nahi ho saka');
+                return response.text();
+            })
+            .then(data => {
+                const container = document.getElementById('header-container');
+                container.innerHTML = data;
+                const scripts = container.querySelectorAll('script');
+                scripts.forEach(script => {
+                    const newScript = document.createElement('script');
+                    if (script.src) newScript.src = script.src;
+                    else newScript.textContent = script.textContent;
+                    document.body.appendChild(newScript);
+                });
+            })
+            .catch(error => console.error(error));
+
+        // Footer Loader with Absolute Path
+        fetch('/footer.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Footer load nahi ho saka');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error(error));
     </script>
 </body>
 </html>
