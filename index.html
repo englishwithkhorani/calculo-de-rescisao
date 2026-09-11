@@ -2,9 +2,8 @@
 <html lang="pt-BR">
 <head>
 <!-- favicon logo ka source code ha ye  -->
-<script src="favicon.js"></script>
+<script src="/favicon.js"></script>
 <!-- favicon logo ka source code ha ye  -->
-
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1398,9 +1397,12 @@
     <div id="footer-container"></div>
 
     <script>
-        // Header Loader
+        // Header Loader with Absolute Path
         fetch('/header.html')
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) throw new Error('Header load nahi ho saka');
+                return response.text();
+            })
             .then(data => {
                 const container = document.getElementById('header-container');
                 container.innerHTML = data;
@@ -1411,14 +1413,19 @@
                     else newScript.textContent = script.textContent;
                     document.body.appendChild(newScript);
                 });
-            });
+            })
+            .catch(error => console.error(error));
 
-        // Footer Loader
+        // Footer Loader with Absolute Path
         fetch('/footer.html')
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) throw new Error('Footer load nahi ho saka');
+                return response.text();
+            })
             .then(data => {
                 document.getElementById('footer-container').innerHTML = data;
-            });
+            })
+            .catch(error => console.error(error));
     </script>
 </body>
 </html>
