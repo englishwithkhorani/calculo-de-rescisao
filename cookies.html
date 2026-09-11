@@ -252,7 +252,7 @@
         });
 
         // Header Loader
-        fetch('header.html')
+        fetch('/header.html')
             .then(response => response.text())
             .then(data => {
                 const container = document.getElementById('header-container');
@@ -267,7 +267,7 @@
             });
 
         // Footer Loader
-        fetch('footer.html')
+        fetch('/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-container').innerHTML = data;

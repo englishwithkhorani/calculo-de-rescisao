@@ -620,7 +620,7 @@
   </style>
 
   <script>
-      fetch('header.html')
+      fetch('/header.html')
           .then(response => response.text())
           .then(data => {
               const container = document.getElementById('header-container');
@@ -633,7 +633,7 @@
               });
           });
 
-      fetch('footer.html')
+      fetch('/footer.html')
           .then(response => response.text())
           .then(data => { document.getElementById('footer-container').innerHTML = data; });
   </script>
