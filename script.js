@@ -21,15 +21,15 @@
 
     <!-- JavaScript code jo files ko load karega -->
     <script>
-        // Header load karne ke liye
-        fetch('header.html')
+        // Header load karne ke liye (Cache busting parameter ke sath)
+        fetch('header.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-container').innerHTML = data;
             });
 
-        // Footer load karne ke liye
-        fetch('footer.html')
+        // Footer load karne ke liye (Cache busting parameter ke sath)
+        fetch('footer.html?v=2')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-container').innerHTML = data;
@@ -38,7 +38,3 @@
 
 </body>
 </html>
-
-
-
-
