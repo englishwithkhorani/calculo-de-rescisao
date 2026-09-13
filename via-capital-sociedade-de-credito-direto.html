@@ -286,7 +286,323 @@
 </head>
 
 <body>
-  <div id="header-container"></div>
+
+
+<header class="luxury-header">
+    <div class="brand-container">
+        <div class="calc-logo-icon">
+            <svg viewBox="0 0 24 24" class="calculator-svg">
+                <rect x="3" y="2" width="18" height="20" rx="3" fill="none" stroke="url(#neonGradient)" stroke-width="1.5" stroke-linejoin="round"/>
+                <rect x="6" y="5" width="12" height="4" rx="1" fill="rgba(0, 242, 254, 0.15)" stroke="url(#neonGradient)" stroke-width="0.8"/>
+                <line x1="8" y1="7" x2="14" y2="7" stroke="#00f2fe" stroke-width="1" stroke-linecap="round"/>
+                <circle cx="16" cy="7" r="0.6" fill="#4facfe"/>
+                
+                <rect x="6" y="11" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                <rect x="10.5" y="11" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                <rect x="15" y="11" width="3" height="5.5" rx="0.5" fill="rgba(79, 172, 254, 0.35)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                
+                <rect x="6" y="14.5" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                <rect x="10.5" y="14.5" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                
+                <rect x="6" y="18" width="7.5" height="2.5" rx="0.5" fill="rgba(79, 172, 254, 0.35)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                <rect x="15" y="18" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+            </svg>
+        </div>
+        <div class="logo-text-group">
+            <span class="logo-title">Calculo de Rescisao</span>
+            <span class="logo-tagline">Rescisão Trabalhista</span>
+        </div>
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active"><span>Calculo de Rescisão</span></a></li>
+            <li><a href="contact-us.html"><span>Fale Conosco</span></a></li>
+            <li><a href="aviso-legal.html"><span>Aviso Legal</span></a></li>
+            <li><a href="blogs.html"><span>Blogs and FAQ</span></a></li>
+            <li><a href="about.html"><span>Sobre Nós</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<svg style="display: none;">
+    <defs>
+        <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00f2fe" />
+            <stop offset="100%" stop-color="#4facfe" />
+        </linearGradient>
+    </defs>
+</svg>
+
+<style>
+    @keyframes borderGlow {
+        0% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 15px rgba(0, 242, 254, 0.2); }
+        50% { border-color: rgba(79, 172, 254, 0.7); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 30px rgba(0, 242, 254, 0.4); }
+        100% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 15px rgba(0, 242, 254, 0.2); }
+    }
+
+    .luxury-header {
+        position: relative;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        background: linear-gradient(135deg, rgba(13, 27, 42, 0.94), rgba(27, 38, 59, 0.94));
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(0, 242, 254, 0.3);
+        border-radius: 14px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: borderGlow 6s infinite ease-in-out;
+        z-index: 1000;
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        transform: scale(1);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    }
+
+    .luxury-header *, .luxury-header *::before, .luxury-header *::after {
+        box-sizing: border-box !important;
+    }
+
+    .luxury-header:hover {
+        transform: scale(1.01);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 35px rgba(0, 242, 254, 0.4);
+    }
+
+    .brand-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        flex: 0 0 auto;
+    }
+
+    .calc-logo-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        min-height: 38px;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(79, 172, 254, 0.15));
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(0, 242, 254, 0.5);
+        box-shadow: 
+            0 0 12px rgba(0, 242, 254, 0.4),
+            inset 0 0 8px rgba(79, 172, 254, 0.3);
+        flex-shrink: 0;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .calc-logo-icon:hover {
+        box-shadow: 
+            0 0 20px rgba(0, 242, 254, 0.8),
+            0 0 30px rgba(79, 172, 254, 0.5);
+    }
+
+    .calculator-svg {
+        width: 22px;
+        height: 22px;
+        filter: drop-shadow(0 0 4px rgba(0, 242, 254, 0.8));
+    }
+
+    .logo-text-group {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    .logo-title {
+        font-size: 15px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #00f2fe, #4facfe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+        white-space: nowrap;
+        line-height: 1.1;
+    }
+
+    .logo-tagline {
+        font-size: 9px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #90e0ef;
+        text-shadow: 0 0 6px rgba(144, 224, 239, 0.4);
+        white-space: nowrap;
+        line-height: 1.1;
+        margin-top: 1px;
+    }
+
+    nav {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 8px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #e0fbfc;
+        position: relative;
+        padding: 6px 14px;
+        border-radius: 8px;
+        background: transparent;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .nav-links li a span {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .nav-links li a:active span {
+        transform: scale(0.85);
+    }
+
+    .nav-links li a::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+        border: 1px solid rgba(0, 242, 254, 0.5);
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0, 242, 254, 0.3), inset 0 0 8px rgba(0, 242, 254, 0.2);
+        opacity: 0;
+        transform: scale(0.8) translateY(5px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-links li a::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 20%;
+        width: 60%;
+        height: 2px;
+        background: #00f2fe;
+        box-shadow: 0 0 6px #00f2fe;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links li a:hover::before,
+    .nav-links li a.active::before {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    .nav-links li a:hover::after,
+    .nav-links li a.active::after {
+        opacity: 1;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+        color: #00f2fe;
+        text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
+        transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        flex-shrink: 0;
+    }
+
+    .menu-toggle span {
+        width: 22px;
+        height: 2px;
+        background: #00f2fe;
+        border-radius: 2px;
+        box-shadow: 0 0 5px #00f2fe;
+        transition: all 0.3s ease;
+    }
+
+    @media (max-width: 1024px) {
+        .luxury-header {
+            width: 100% !important;
+            padding: 10px 15px;
+        }
+
+        nav {
+            flex: unset;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 27, 42, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+
+        .nav-links.active {
+            transform: translateY(0);
+            opacity: 1; ساری pointer-events: auto;
+        }
+
+        .nav-links li {
+            width: 85%;
+            text-align: center;
+        }
+
+        .nav-links li a {
+            display: block;
+            width: 100%;
+            padding: 10px 16px;
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
+    }
+</style>
+
+
+
+  
 
   <!-- MAIN CONTAINER WITH SIDEBAR LAYOUT -->
   <main class="max-w-6xl mx-auto px-4 py-8 md:py-12">
@@ -646,35 +962,282 @@
       }
   </style>
 
-  <script>
-      // Header Load Karne Ka Function jo javascript ha ek 
-      fetch('/header.html')
-          .then(response => response.text())
-          .then(data => {
-              const container = document.getElementById('header-container');
-              container.innerHTML = data;
+  <footer class="luxury-footer">
+    <div class="footer-content">
+        <!-- Brand Column -->
+        <div class="footer-col brand-col">
+            <div class="footer-brand">
+                <div class="calc-logo-icon">
+                    <svg viewBox="0 0 24 24" class="calculator-svg">
+                        <rect x="3" y="2" width="18" height="20" rx="3" fill="none" stroke="url(#neonGradient)" stroke-width="1.5" stroke-linejoin="round"/>
+                        <rect x="6" y="5" width="12" height="4" rx="1" fill="rgba(0, 242, 254, 0.15)" stroke="url(#neonGradient)" stroke-width="0.8"/>
+                        <line x1="8" y1="7" x2="14" y2="7" stroke="#00f2fe" stroke-width="1" stroke-linecap="round"/>
+                        <circle cx="16" cy="7" r="0.6" fill="#4facfe"/>
+                        <rect x="6" y="11" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="10.5" y="11" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="15" y="11" width="3" height="5.5" rx="0.5" fill="rgba(79, 172, 254, 0.35)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="6" y="14.5" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="10.5" y="14.5" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="6" y="18" width="7.5" height="2.5" rx="0.5" fill="rgba(79, 172, 254, 0.35)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="15" y="18" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                    </svg>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-title">Calculo de Rescisao</span>
+                    <span class="logo-tagline">Rescisão Trabalhista</span>
+                </div>
+            </div>
+            <p class="footer-desc">Ferramenta online profissional e segura para o cálculo preciso de rescisão de contrato de trabalho conforme a legislação brasileira.</p>
+        </div>
 
-              // Fetch ke baad andr mojood <script> tags ko manually run karne ke liye
-              const scripts = container.querySelectorAll('script');
-              scripts.forEach(script => {
-                  const newScript = document.createElement('script');
-                  if (script.src) {
-                      newScript.src = script.src;
-                  } else {
-                      newScript.textContent = script.textContent;
-                  }
-                  document.body.appendChild(newScript);
-              });
-          });
+        <!-- Navegação Column -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Navegação</h4>
+            <ul class="footer-links">
+                <li><a href="index.html"><span>Calculo de Rescisão</span></a></li>
+                <li><a href="blogs.html"><span>Blogs and FAQ</span></a></li>
+                <li><a href="about.html"><span>Sobre Nós</span></a></li>
+                <li><a href="contact-us.html"><span>Fale Conosco</span></a></li>
+                <li><a href="aviso-legal.html"><span>Aviso Legal</span></a></li>
+            </ul>
+        </div>
 
-      // Footer Load Karne Ka Function
-      fetch('/footer.html')
-          .then(response => response.text())
-          .then(data => {
-              document.getElementById('footer-container').innerHTML = data;
-          });
-  </script>
+        <!-- Artigos e Dicas -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Artigos Recentes</h4>
+            <ul class="footer-links">
+                <li><a href="art-769-da-clt.html"><span>Artigo 769 da CLT</span></a></li>
+                <li><a href="clt-desvio-de-funcao.html"><span>Desvio de Função na CLT</span></a></li>
+                <li><a href="intervalo-de-15min-para-lanche-clt.html"><span>Intervalo para Lanche</span></a></li>
+                <li><a href="artigo-444-da-clt.html"><span>O Artigo 444 da CLT</span></a></li>
+                <li><a href="qual-a-tolerancia-de-atraso-clt.html"><span>Tolerância de Atraso</span></a></li>
+                <li><a href="refinanciamento-consignado-clt-facta.html"><span>Consignado CLT Facta</span></a></li>
+                <li><a href="registro-clt-vs-pj.html"><span>Registro CLT vs PJ</span></a></li>
+                <li><a href="via-capital-sociedade-de-credito-direto.html"><span>Via Capital - Sociedade</span></a></li>
+            </ul>
+        </div>
 
-  <div id="footer-container"></div>
+        <!-- Suporte & Policies Column -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Políticas</h4>
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html"><span>Política de Privacidade</span></a></li>
+                <li><a href="cookies.html"><span>Política de Cookies</span></a></li>
+                <li><a href="Termos e Condições.html"><span>Termos e Condições</span></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+        <p class="copyright-text">
+            Copyright &copy; 2026 calculoderescisao.com. Todos os direitos reservados.
+        </p>
+    </div>
+</footer>
+
+<style>
+    @keyframes footerBorderGlow {
+        0% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 20px rgba(0, 242, 254, 0.2); }
+        50% { border-color: rgba(79, 172, 254, 0.7); box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 35px rgba(0, 242, 254, 0.4); }
+        100% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 20px rgba(0, 242, 254, 0.2); }
+    }
+
+    .luxury-footer {
+        position: relative;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(27, 38, 59, 0.9));
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(0, 242, 254, 0.3);
+        border-radius: 20px;
+        padding: 40px 35px 25px 35px;
+        margin-top: 40px;
+        animation: footerBorderGlow 6s infinite ease-in-out;
+        z-index: 1000;
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        transform: scale(1);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    }
+
+    .luxury-footer:hover {
+        transform: scale(1.01);
+        box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 40px rgba(0, 242, 254, 0.4);
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .brand-col {
+        flex: 1.5;
+    }
+
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 15px;
+    }
+
+    .footer-col .calc-logo-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(79, 172, 254, 0.15));
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(0, 242, 254, 0.5);
+        box-shadow: 
+            0 0 15px rgba(0, 242, 254, 0.4),
+            inset 0 0 10px rgba(79, 172, 254, 0.3);
+    }
+
+    .calculator-svg {
+        width: 42px;
+        height: 42px;
+        filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.8));
+    }
+
+    .logo-text-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-title {
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #00f2fe, #4facfe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+    }
+
+    .logo-tagline {
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #90e0ef;
+        text-shadow: 0 0 8px rgba(144, 224, 239, 0.4);
+    }
+
+    .footer-desc {
+        font-size: 13px;
+        color: #b0c4de;
+        line-height: 1.6;
+        margin-top: 5px;
+    }
+
+    .footer-heading {
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #00f2fe;
+        margin-bottom: 15px;
+        text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+    }
+
+    .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li a {
+        text-decoration: none;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #e0fbfc;
+        position: relative;
+        padding: 5px 8px;
+        border-radius: 6px;
+        background: transparent;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: inline-block;
+    }
+
+    .footer-links li a span {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .footer-links li a:active span {
+        transform: scale(0.85);
+    }
+
+    .footer-links li a::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+        border: 1px solid rgba(0, 242, 254, 0.5);
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+        opacity: 0;
+        transform: scale(0.8) translateY(5px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .footer-links li a:hover::before {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    .footer-links li a:hover {
+        color: #00f2fe;
+        text-shadow: 0 0 12px rgba(0, 242, 254, 0.8);
+        transform: translateX(4px);
+    }
+
+    .footer-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.5), transparent);
+        margin: 25px 0 20px 0;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .copyright-text {
+        font-size: 12px;
+        color: #90e0ef;
+        letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+        .luxury-footer {
+            padding: 30px 20px 20px 20px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+</style>
+
+
 </body>
 </html>

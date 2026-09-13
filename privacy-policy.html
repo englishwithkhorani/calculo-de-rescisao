@@ -2,273 +2,839 @@
 <html lang="pt-BR">
 <head>
 
-
 <!-- favicon logo ka source code ha ye  -->
 <script src="favicon.js"></script>
 <!-- favicon logo ka source code ha ye  -->
 
-
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Política de Privacidade | Calculo de Rescisao</title>
-  <meta name="description" content="Política de Privacidade do Calculo de Rescisao. Saiba como lidamos com seus dados, uso de cookies e conformidade com as diretrizes do Google AdSense.">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'Arial', 'sans-serif']
-          },
-          colors: {
-            brand: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              500: '#2563eb',
-              600: '#1d4ed8',
-              700: '#1e40af',
-              900: '#172554'
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Calculo de Rescisao Trabalhista</title>
+    <!-- On-Page SEO Meta Description -->
+    <meta name="description" content="Política de privacidade do site Calculo de Rescisao. Saiba como tratamos suas informações e dados pessoais com total segurança.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://calculoderescisão.com/privacy-policy.html">
+    
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        neon: {
+                            cyan: '#00f2fe',
+                            blue: '#4facfe',
+                            violet: '#8b5cf6',
+                            gold: '#fbbf24',
+                            dark: '#070b14',
+                            card: '#0f172a',
+                            border: 'rgba(0, 242, 254, 0.3)'
+                        }
+                    }
+                }
             }
-          }
         }
-      }
-    }
-  </script>
+    </script>
+    
+    <style>
+        :root {
+            --bg-deep: #070b14;
+            --card-surface: rgba(15, 23, 42, 0.85);
+            --card-surface-solid: #0f172a;
+            --neon-cyan: #00f2fe;
+            --neon-blue: #4facfe;
+            --neon-violet: #8b5cf6;
+            --border-glow: rgba(0, 242, 254, 0.4);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at 50% -20%, #1e1b4b 0%, #070b14 65%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 28px 16px;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-    body {
-      margin: 0;
-      font-family: Inter, Arial, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-    }
+        /* Efeito de Cursor Shadow Glow (Luz Seguidora do Mouse) */
+        #cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 450px;
+            height: 450px;
+            margin-top: -225px;
+            margin-left: -225px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(139, 92, 246, 0.08) 45%, transparent 70%);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.08s ease-out;
+            will-change: transform;
+        }
 
-    .hero-bg {
-      background:
-        radial-gradient(circle at 10% 20%, rgba(37, 99, 235, .18), transparent 30%),
-        radial-gradient(circle at 90% 10%, rgba(14, 165, 233, .16), transparent 28%),
-        linear-gradient(135deg, #0f172a, #172554 55%, #1d4ed8);
-    }
-  </style>
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 900px;
+            height: 400px;
+            background: linear-gradient(90deg, rgba(0, 242, 254, 0.18), rgba(139, 92, 246, 0.18));
+            filter: blur(140px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        #header-container, #footer-container {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            background: var(--card-surface);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 28px;
+            padding: 50px 40px;
+            margin: 22px 0;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 40px rgba(0, 242, 254, 0.08);
+            border: 1px solid var(--border-glow);
+            position: relative;
+        }
+
+        .page-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+            box-shadow: 0 0 15px var(--neon-cyan);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .main-heading {
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1.25;
+            color: #ffffff;
+            margin-bottom: 18px;
+            letter-spacing: -0.8px;
+        }
+
+        .main-subtext {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .content-block {
+            background: rgba(11, 18, 32, 0.75);
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 25px;
+        }
+
+        .content-block h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #00f2fe;
+            margin-bottom: 15px;
+        }
+
+        .content-block p, .content-block li {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 12px;
+        }
+
+        .content-block ul {
+            padding-left: 20px;
+            list-style-type: disc;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .page-wrapper {
+                padding: 30px 18px;
+            }
+            .main-heading {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 
-
-    <!-- ==========================================
-        ye code body k samnay wala hamesha new page ma add krna ha abid
-        ========================================== -->
-
-
-
-
-<body>    <div id="header-container"></div>
-
-  <!-- HERO SECTION -->
-  <section class="hero-bg text-white">
-    <div class="max-w-4xl mx-auto px-6 py-16 md:py-20 text-center">
-      <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-semibold mb-5 backdrop-blur-sm">
-        Calculo de Rescisao
-      </span>
-      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
-        Política de Privacidade
-      </h1>
-      <p class="mt-4 text-base md:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
-        A sua privacidade é importante para nós. Esta política descreve o nosso compromisso com a transparência de dados ao utilizar nossas ferramentas de cálculo e ler nossos conteúdos informativos.
-      </p>
-    </div>
-  </section>
-
-  <!-- MAIN CONTENT AREA -->
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 -mt-10 pb-20">
-
-    <div class="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl shadow-slate-200/50 border border-slate-100 space-y-8">
-
-      <!-- INTRO -->
-      <div class="space-y-4">
-        <p class="text-slate-600 leading-relaxed text-base">
-          No <strong>Calculo de Rescisao</strong>, acessível através do nosso site, uma das nossas principais prioridades é a privacidade dos nossos visitantes. Este documento de Política de Privacidade descreve nossa filosofia central sobre privacidade e tratamento de dados.
-        </p>
-        <p class="text-slate-600 leading-relaxed text-base">
-          Se você tiver dúvidas adicionais ou precisar de mais informações sobre nossa Política de Privacidade, não hesite em nos contatar por e-mail em <a href="mailto:englishwithkhorani@gmail.com" class="text-blue-600 font-semibold underline">englishwithkhorani@gmail.com</a>.
-        </p>
-      </div>
-
-      <!-- NEW SECTION: WE DO NOT COLLECT PERSONAL DATA -->
-      <div class="bg-blue-50/70 border border-blue-100 rounded-2xl p-6 md:p-8 space-y-4">
-        <h2 class="text-xl md:text-2xl font-bold text-blue-950">Nosso Compromisso: Nós Não Coletamos Dados Pessoais</h2>
-        <p class="text-slate-700 text-base leading-relaxed">
-          Queremos deixar absolutamente claro que <strong>nós não coletamos nenhum dado pessoal dos nossos visitantes</strong>. Nosso site foi criado puramente para fornecer ferramentas de cálculo gratuitas e blogs informativos desenhados para ajudar as pessoas a entenderem cálculos e diretrizes trabalhistas com facilidade.
-        </p>
-        <p class="text-slate-700 text-base leading-relaxed">
-          Quando você usa nossas calculadoras, todas as simulações e cálculos são executados instantaneamente para sua conveniência, sem armazenar suas informações financeiras pessoais em nossos servidores. Você pode usar nossas ferramentas e ler nossos artigos de forma totalmente segura e privada.
-        </p>
-      </div>
-
-      <!-- SECTION 1 -->
-      <div class="space-y-4 pt-6 border-t border-slate-100">
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">1. Arquivos de Log</h2>
-        <p class="text-slate-600 leading-relaxed text-base">
-          O Calculo de Rescisao segue um procedimento padrão de uso de arquivos de log. Esses arquivos registram os visitantes quando eles visitam sites. As informações coletadas pelos arquivos de log incluem endereços de protocolo de internet (IP), tipo de navegador, Provedor de Serviços de Internet (ISP), carimbo de data e hora, páginas de referência/saída e possivelmente o número de cliques. Estes dados não estão vinculados a nenhuma informação que seja pessoalmente identificável. O objetivo das informações é analisar tendências, administrar o site e rastrear o movimento dos usuários no site.
-        </p>
-      </div>
-
-      <!-- SECTION 2 -->
-      <div class="space-y-4 pt-6 border-t border-slate-100">
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">2. Cookie DART do Google DoubleClick</h2>
-        <p class="text-slate-600 leading-relaxed text-base">
-          O Google é um fornecedor terceirizado em nosso site. Ele também utiliza cookies, conhecidos como cookies DART, para exibir anúncios aos visitantes do nosso site com base na visita deles a este e a outros sites na internet. No entanto, os visitantes podem optar por recusar o uso de cookies DART visitando a Política de privacidade da rede de conteúdo e de anúncios do Google no seguinte URL – <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://policies.google.com/technologies/ads</a>.
-        </p>
-      </div>
-
-      <!-- SECTION 3 -->
-      <div class="space-y-4 pt-6 border-t border-slate-100">
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">3. Nossos Parceiros de Publicidade e Google AdSense</h2>
-        <p class="text-slate-600 leading-relaxed text-base">
-          Alguns dos anunciantes em nosso site podem usar cookies e web beacons. Nosso principal parceiro de publicidade é o Google AdSense. Cada um de nossos parceiros de publicidade possui sua própria Política de Privacidade para suas políticas de dados de usuários. Para facilitar o acesso, criamos um link hipertextual para suas Políticas de Privacidade abaixo:
-        </p>
-        <ul class="list-disc pl-6 space-y-2 text-slate-600 text-base">
-          <li><strong>Google:</strong> <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://policies.google.com/technologies/ads</a></li>
-        </ul>
-        <p class="text-slate-600 leading-relaxed text-base pt-2">
-          Servidores de anúncios ou redes de anúncios de terceiros usam tecnologias como cookies, JavaScript ou Web Beacons que são usados em seus respectivos anúncios e links que aparecem no Calculo de Rescisao, que são enviados diretamente para o navegador dos usuários. Eles recebem automaticamente o seu endereço IP quando isso ocorre. Essas tecnologias são usadas para medir a eficácia de suas campanhas publicitárias e/ou para personalizar o conteúdo publicitário que você vê nos sites que visita.
-        </p>
-      </div>
-
-      <!-- SECTION 4 -->
-      <div class="space-y-4 pt-6 border-t border-slate-100">
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">4. Direitos de Privacidade da CCPA (Não Vender Minhas Informações Pessoais)</h2>
-        <p class="text-slate-600 leading-relaxed text-base">
-          Sob a CCPA, entre outros direitos, os consumidores da Califórnia têm o direito de solicitar que uma empresa que coleta dados pessoais de um consumidor divulgue as categorias e pedaços específicos de dados pessoais que a empresa coletou, exclua quaisquer dados pessoais coletados ou não venda os dados pessoais do consumidor.
-        </p>
-        <p class="text-slate-600 leading-relaxed text-base pt-2">
-          Como não coletamos nem vendemos nenhum dado pessoal de usuários, nenhum dado pessoal é compartilhado. Se você quiser fazer alguma consulta, entre em contato conosco.
-        </p>
-      </div>
-
-      <!-- SECTION 5 -->
-      <div class="space-y-4 pt-6 border-t border-slate-100">
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">5. Direitos de Proteção de Dados do GDPR</h2>
-        <p class="text-slate-600 leading-relaxed text-base">
-          Queremos garantir que você esteja totalmente ciente de todos os seus direitos de proteção de dados. Todo usuário tem direito ao acesso, retificação, exclusão, restrição de processamento, oposição ao processamento ou portabilidade de dados sob certas condições. Como não coletamos dados de identificação pessoal de nossos leitores e usuários das calculadoras, não há dados de perfil armazenados para processar ou modificar. Se você tiver alguma dúvida sobre isso, entre em contato conosco.
-        </p>
-      </div>
-
-      <!-- SECTION 6 -->
-      <div class="space-y-4 pt-6 border-t border-slate-100">
-        <h2 class="text-xl md:text-2xl font-bold text-slate-900">6. Informações de Crianças</h2>
-        <p class="text-slate-600 leading-relaxed text-base">
-          Outra parte de nossa prioridade é adicionar proteção para crianças enquanto usam a internet. Incentivamos os pais e responsáveis a observar, participar e/ou monitorar e orientar sua atividade online.
-        </p>
-        <p class="text-slate-600 leading-relaxed text-base">
-          O Calculo de Rescisao não coleta conscientemente nenhuma Informação de Identificação Pessoal de crianças menores de 13 anos. Se você acha que seu filho forneceu esse tipo de informação em nosso site, recomendamos fortemente que você entre em contato conosco imediatamente e faremos nossos melhores esforços para remover prontamente tais informações de nossos registros.
-        </p>
-      </div>
-
-      <!-- CONTACT BOX -->
-      <div class="bg-blue-50/70 border border-blue-100 rounded-2xl p-6 md:p-8 space-y-4 pt-6 border-t border-slate-100">
-        <h3 class="text-xl font-bold text-blue-950">Fale Conosco</h3>
-        <p class="text-slate-700 text-base leading-relaxed">
-          Se você tiver alguma dúvida ou sugestão sobre a nossa Política de Privacidade ou sobre nossas calculadoras gratuitas, não hesite em entrar em contato conosco:
-        </p>
-        <div>
-          <a href="mailto:englishwithkhorani@gmail.com" class="inline-flex items-center gap-2 text-base md:text-lg font-bold text-blue-600 hover:text-blue-800 underline">
-            <span>📧 englishwithkhorani@gmail.com</span>
-          </a>
+<header class="luxury-header">
+    <div class="brand-container">
+        <div class="calc-logo-icon">
+            <svg viewBox="0 0 24 24" class="calculator-svg">
+                <rect x="3" y="2" width="18" height="20" rx="3" fill="none" stroke="url(#neonGradient)" stroke-width="1.5" stroke-linejoin="round"/>
+                <rect x="6" y="5" width="12" height="4" rx="1" fill="rgba(0, 242, 254, 0.15)" stroke="url(#neonGradient)" stroke-width="0.8"/>
+                <line x1="8" y1="7" x2="14" y2="7" stroke="#00f2fe" stroke-width="1" stroke-linecap="round"/>
+                <circle cx="16" cy="7" r="0.6" fill="#4facfe"/>
+                
+                <rect x="6" y="11" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                <rect x="10.5" y="11" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                <rect x="15" y="11" width="3" height="5.5" rx="0.5" fill="rgba(79, 172, 254, 0.35)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                
+                <rect x="6" y="14.5" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                <rect x="10.5" y="14.5" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                
+                <rect x="6" y="18" width="7.5" height="2.5" rx="0.5" fill="rgba(79, 172, 254, 0.35)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                <rect x="15" y="18" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+            </svg>
         </div>
-      </div>
-
+        <div class="logo-text-group">
+            <span class="logo-title">Calculo de Rescisao</span>
+            <span class="logo-tagline">Rescisão Trabalhista</span>
+        </div>
     </div>
 
-  </main>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html"><span>Calculo de Rescisão</span></a></li>
+            <li><a href="contact-us.html"><span>Fale Conosco</span></a></li>
+            <li><a href="aviso-legal.html"><span>Aviso Legal</span></a></li>
+            <li><a href="blogs.html"><span>Blogs and FAQ</span></a></li>
+            <li><a href="about.html"><span>Sobre Nós</span></a></li>
+        </ul>
+    </nav>
 
-</body>
-</html>
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
 
-
-
-
-
-
-
-
-
+<svg style="display: none;">
+    <defs>
+        <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00f2fe" />
+            <stop offset="100%" stop-color="#4facfe" />
+        </linearGradient>
+    </defs>
+</svg>
 
 <style>
-    #header-container {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
+    @keyframes borderGlow {
+        0% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 15px rgba(0, 242, 254, 0.2); }
+        50% { border-color: rgba(79, 172, 254, 0.7); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 30px rgba(0, 242, 254, 0.4); }
+        100% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 15px rgba(0, 242, 254, 0.2); }
+    }
+
+    .luxury-header {
+        position: relative;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        background: linear-gradient(135deg, rgba(13, 27, 42, 0.94), rgba(27, 38, 59, 0.94));
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(0, 242, 254, 0.3);
+        border-radius: 14px;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        animation: borderGlow 6s infinite ease-in-out;
+        z-index: 1000;
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        transform: scale(1);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    }
+
+    .luxury-header *, .luxury-header *::before, .luxury-header *::after {
+        box-sizing: border-box !important;
+    }
+
+    .luxury-header:hover {
+        transform: scale(1.01);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 35px rgba(0, 242, 254, 0.4);
+    }
+
+    .brand-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        flex: 0 0 auto;
+    }
+
+    .calc-logo-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        min-height: 38px;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(79, 172, 254, 0.15));
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(0, 242, 254, 0.5);
+        box-shadow: 
+            0 0 12px rgba(0, 242, 254, 0.4),
+            inset 0 0 8px rgba(79, 172, 254, 0.3);
+        flex-shrink: 0;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .calc-logo-icon:hover {
+        box-shadow: 
+            0 0 20px rgba(0, 242, 254, 0.8),
+            0 0 30px rgba(79, 172, 254, 0.5);
+    }
+
+    .calculator-svg {
+        width: 22px;
+        height: 22px;
+        filter: drop-shadow(0 0 4px rgba(0, 242, 254, 0.8));
+    }
+
+    .logo-text-group {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+
+    .logo-title {
+        font-size: 15px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #00f2fe, #4facfe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+        white-space: nowrap;
+        line-height: 1.1;
+    }
+
+    .logo-tagline {
+        font-size: 9px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #90e0ef;
+        text-shadow: 0 0 6px rgba(144, 224, 239, 0.4);
+        white-space: nowrap;
+        line-height: 1.1;
+        margin-top: 1px;
+    }
+
+    nav {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 8px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #e0fbfc;
+        position: relative;
+        padding: 6px 14px;
+        border-radius: 8px;
+        background: transparent;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .nav-links li a span {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .nav-links li a:active span {
+        transform: scale(0.85);
+    }
+
+    .nav-links li a::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+        border: 1px solid rgba(0, 242, 254, 0.5);
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0, 242, 254, 0.3), inset 0 0 8px rgba(0, 242, 254, 0.2);
+        opacity: 0;
+        transform: scale(0.8) translateY(5px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-links li a::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 20%;
+        width: 60%;
+        height: 2px;
+        background: #00f2fe;
+        box-shadow: 0 0 6px #00f2fe;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links li a:hover::before,
+    .nav-links li a.active::before {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    .nav-links li a:hover::after,
+    .nav-links li a.active::after {
+        opacity: 1;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+        color: #00f2fe;
+        text-shadow: 0 0 10px rgba(0, 242, 254, 0.8);
+        transform: translateY(-1px);
+    }
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        flex-shrink: 0;
+    }
+
+    .menu-toggle span {
+        width: 22px;
+        height: 2px;
+        background: #00f2fe;
+        border-radius: 2px;
+        box-shadow: 0 0 5px #00f2fe;
+        transition: all 0.3s ease;
+    }
+
+    @media (max-width: 1024px) {
+        .luxury-header {
+            width: 100% !important;
+            padding: 10px 15px;
+        }
+
+        nav {
+            flex: unset;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 27, 42, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            gap: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+
+        .nav-links.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .nav-links li {
+            width: 85%;
+            text-align: center;
+        }
+
+        .nav-links li a {
+            display: block;
+            width: 100%;
+            padding: 10px 16px;
+        }
+
+        .menu-toggle {
+            display: flex;
+        }
     }
 </style>
 
+<!-- Elemento do Cursor Shadow / Glow -->
+<div id="cursor-glow"></div>
 
+<main class="page-wrapper">
+    <div class="section-header">
+        <h1 class="main-heading">
+            Política de <span style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Privacidade</span>
+        </h1>
+        <p class="main-subtext">
+            Sua privacidade é de extrema importância para nós. Saiba como tratamos suas informações e dados pessoais com total segurança.
+        </p>
+    </div>
 
+    <div class="content-block">
+        <h2>1. Introdução</h2>
+        <p>A sua privacidade é de extrema importância para nós. Esta Política de Privacidade descreve como o site <strong>calculoderescisao.com</strong> coleta, usa e protege as informações dos visitantes e usuários de nossas ferramentas e calculadoras trabalhistas.</p>
+    </div>
 
+    <div class="content-block">
+        <h2>2. Coleta de Dados e Uso das Calculadoras</h2>
+        <p>Nossas calculadoras de rescisão funcionam de forma interativa diretamente no seu navegador. Os dados financeiros e trabalhistas inseridos por você (como salário, datas e motivos de demissão) <strong>são processados localmente ou para a geração do cálculo específico e não são armazenados permanentemente</strong> em nossos servidores para fins de identificação pessoal.</p>
+    </div>
 
+    <div class="content-block">
+        <h2>3. Cookies e Anúncios do Google (Google AdSense)</h2>
+        <p>Utilizamos cookies para melhorar a experiência do usuário e exibir anúncios relevantes. O Google, como fornecedor terceirizado, utiliza cookies para exibir anúncios em nosso site com base nas visitas anteriores dos usuários a este ou a outros sites na internet.</p>
+        <p>Os usuários podem desativar o uso de publicidade personalizada acessando as Configurações de anúncios do Google.</p>
+    </div>
 
+    <div class="content-block">
+        <h2>4. Links para Terceiros</h2>
+        <p>Nosso site pode conter links para outros sites externos que não são operados por nós. Não nos responsabilizamos pelas políticas de privacidade ou práticas de sites de terceiros.</p>
+    </div>
 
+    <div class="content-block" style="margin-bottom: 0;">
+        <h2>5. Contato</h2>
+        <p>Se você tiver qualquer dúvida sobre esta Política de Privacidade, entre em contato conosco através do e-mail:</p>
+        <p><a href="mailto:englishwithkhorani@gmail.com" style="color: #00f2fe; text-decoration: underline;">englishwithkhorani@gmail.com</a></p>
+    </div>
+</main>
 
-
+<!-- Script do Cursor Glow -->
 <script>
-    // Header Load Karne Ka Function jo javascript ha ek 
-    fetch('/header.html')
-        .then(response => response.text())
-        .then(data => {
-            const container = document.getElementById('header-container');
-            container.innerHTML = data;
-
-            // Fetch ke baad andr mojood <script> tags ko manually run karne ke liye
-            const scripts = container.querySelectorAll('script');
-            scripts.forEach(script => {
-                const newScript = document.createElement('script');
-                if (script.src) {
-                    newScript.src = script.src;
-                } else {
-                    newScript.textContent = script.textContent;
-                }
-                document.body.appendChild(newScript);
-            });
-        });
-
-    // Footer Load Karne Ka Function
-    fetch('/footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-container').innerHTML = data;
-        });
+    const cursorGlow = document.getElementById('cursor-glow');
+    window.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        cursorGlow.style.transform = `translate(${x}px, ${y}px)`;
+    });
 </script>
 
+<footer class="luxury-footer">
+    <div class="footer-content">
+        <!-- Brand Column -->
+        <div class="footer-col brand-col">
+            <div class="footer-brand">
+                <div class="calc-logo-icon">
+                    <svg viewBox="0 0 24 24" class="calculator-svg">
+                        <rect x="3" y="2" width="18" height="20" rx="3" fill="none" stroke="url(#neonGradient)" stroke-width="1.5" stroke-linejoin="round"/>
+                        <rect x="6" y="5" width="12" height="4" rx="1" fill="rgba(0, 242, 254, 0.15)" stroke="url(#neonGradient)" stroke-width="0.8"/>
+                        <line x1="8" y1="7" x2="14" y2="7" stroke="#00f2fe" stroke-width="1" stroke-linecap="round"/>
+                        <circle cx="16" cy="7" r="0.6" fill="#4facfe"/>
+                        <rect x="6" y="11" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="10.5" y="11" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="15" y="11" width="3" height="5.5" rx="0.5" fill="rgba(79, 172, 254, 0.35)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="6" y="14.5" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="10.5" y="14.5" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="6" y="18" width="7.5" height="2.5" rx="0.5" fill="rgba(79, 172, 254, 0.35)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                        <rect x="15" y="18" width="3" height="2.5" rx="0.5" fill="rgba(0, 242, 254, 0.25)" stroke="url(#neonGradient)" stroke-width="0.5"/>
+                    </svg>
+                </div>
+                <div class="logo-text-group">
+                    <span class="logo-title">Calculo de Rescisao</span>
+                    <span class="logo-tagline">Rescisão Trabalhista</span>
+                </div>
+            </div>
+            <p class="footer-desc">Ferramenta online profissional e segura para o cálculo preciso de rescisão de contrato de trabalho conforme a legislação brasileira.</p>
+        </div>
 
+        <!-- Navegação Column -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Navegação</h4>
+            <ul class="footer-links">
+                <li><a href="index.html"><span>Calculo de Rescisão</span></a></li>
+                <li><a href="blogs.html"><span>Blogs and FAQ</span></a></li>
+                <li><a href="about.html"><span>Sobre Nós</span></a></li>
+                <li><a href="contact-us.html"><span>Fale Conosco</span></a></li>
+                <li><a href="aviso-legal.html"><span>Aviso Legal</span></a></li>
+            </ul>
+        </div>
 
+        <!-- Artigos e Dicas -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Artigos Recentes</h4>
+            <ul class="footer-links">
+                <li><a href="art-769-da-clt.html"><span>Artigo 769 da CLT</span></a></li>
+                <li><a href="clt-desvio-de-funcao.html"><span>Desvio de Função na CLT</span></a></li>
+                <li><a href="intervalo-de-15min-para-lanche-clt.html"><span>Intervalo para Lanche</span></a></li>
+                <li><a href="artigo-444-da-clt.html"><span>O Artigo 444 da CLT</span></a></li>
+                <li><a href="qual-a-tolerancia-de-atraso-clt.html"><span>Tolerância de Atraso</span></a></li>
+                <li><a href="refinanciamento-consignado-clt-facta.html"><span>Consignado CLT Facta</span></a></li>
+                <li><a href="registro-clt-vs-pj.html"><span>Registro CLT vs PJ</span></a></li>
+                <li><a href="via-capital-sociedade-de-credito-direto.html"><span>Via Capital - Sociedade</span></a></li>
+            </ul>
+        </div>
 
-
-
-
-
-
-
-
-    <!-- ==========================================
-        ye wala code har page k andar add hoga <body> k bad abid
-        ========================================== -->
+        <!-- Suporte & Policies Column -->
+        <div class="footer-col">
+            <h4 class="footer-heading">Políticas</h4>
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html"><span>Política de Privacidade</span></a></li>
+                <li><a href="cookies.html"><span>Política de Cookies</span></a></li>
+                <li><a href="Termos e Condições.html"><span>Termos e Condições</span></a></li>
+            </ul>
+        </div>
+    </div>
     
+    <div class="footer-divider"></div>
 
+    <div class="footer-bottom">
+        <p class="copyright-text">
+            Copyright &copy; 2026 calculoderescisao.com. Todos os direitos reservados.
+        </p>
+    </div>
+</footer>
 
+<style>
+    @keyframes footerBorderGlow {
+        0% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 20px rgba(0, 242, 254, 0.2); }
+        50% { border-color: rgba(79, 172, 254, 0.7); box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 35px rgba(0, 242, 254, 0.4); }
+        100% { border-color: rgba(0, 242, 254, 0.3); box-shadow: 0 -20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 20px rgba(0, 242, 254, 0.2); }
+    }
 
+    .luxury-footer {
+        position: relative;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(13, 27, 42, 0.9), rgba(27, 38, 59, 0.9));
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(0, 242, 254, 0.3);
+        border-radius: 20px;
+        padding: 40px 35px 25px 35px;
+        margin-top: 40px;
+        animation: footerBorderGlow 6s infinite ease-in-out;
+        z-index: 1000;
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        transform: scale(1);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    }
 
-    <div id="footer-container"></div>
+    .luxury-footer:hover {
+        transform: scale(1.01);
+        box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 40px rgba(0, 242, 254, 0.4);
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .brand-col {
+        flex: 1.5;
+    }
+
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 15px;
+    }
+
+    .footer-col .calc-logo-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(79, 172, 254, 0.15));
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(0, 242, 254, 0.5);
+        box-shadow: 
+            0 0 15px rgba(0, 242, 254, 0.4),
+            inset 0 0 10px rgba(79, 172, 254, 0.3);
+    }
+
+    .calculator-svg {
+        width: 42px;
+        height: 42px;
+        filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.8));
+    }
+
+    .logo-text-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo-title {
+        font-size: 18px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #00f2fe, #4facfe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
+    }
+
+    .logo-tagline {
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #90e0ef;
+        text-shadow: 0 0 8px rgba(144, 224, 239, 0.4);
+    }
+
+    .footer-desc {
+        font-size: 13px;
+        color: #b0c4de;
+        line-height: 1.6;
+        margin-top: 5px;
+    }
+
+    .footer-heading {
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #00f2fe;
+        margin-bottom: 15px;
+        text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+    }
+
+    .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li a {
+        text-decoration: none;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #e0fbfc;
+        position: relative;
+        padding: 5px 8px;
+        border-radius: 6px;
+        background: transparent;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: inline-block;
+    }
+
+    .footer-links li a span {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .footer-links li a:active span {
+        transform: scale(0.85);
+    }
+
+    .footer-links li a::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 242, 254, 0.2), rgba(79, 172, 254, 0.2));
+        border: 1px solid rgba(0, 242, 254, 0.5);
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+        opacity: 0;
+        transform: scale(0.8) translateY(5px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .footer-links li a:hover::before {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    .footer-links li a:hover {
+        color: #00f2fe;
+        text-shadow: 0 0 12px rgba(0, 242, 254, 0.8);
+        transform: translateX(4px);
+    }
+
+    .footer-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.5), transparent);
+        margin: 25px 0 20px 0;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+
+    .copyright-text {
+        font-size: 12px;
+        color: #90e0ef;
+        letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+        .luxury-footer {
+            padding: 30px 20px 20px 20px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+</style>
+
+</body>
+</html>
