@@ -293,10 +293,6 @@
 
 <body>
 
-
-
-
-
 <header class="luxury-header">
     <div class="brand-container">
         <div class="calc-logo-icon">
@@ -589,7 +585,8 @@
 
         .nav-links.active {
             transform: translateY(0);
-            opacity: 1; ساری pointer-events: auto;
+            opacity: 1; 
+            pointer-events: auto;
         }
 
         .nav-links li {
@@ -608,21 +605,6 @@
         }
     }
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 
   <!-- MAIN CONTAINER WITH SIDEBAR LAYOUT -->
   <main class="max-w-6xl mx-auto px-4 py-8 md:py-12">
@@ -958,10 +940,7 @@
     <p style="color: #a0c4df; font-size: 14px; margin-bottom: 20px;">Use nossa ferramenta gratuita para calcular saldo de salário, FGTS, férias e muito mais em poucos cliques.</p>
     <a href="https://calculoderescisão.com/" style="display: inline-block; background: linear-gradient(135deg, #00f2fe, #4facfe); color: #0d1b2a; padding: 12px 25px; font-weight: 700; text-decoration: none; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); transition: 0.3s;">Calcular Rescisão Agora</a>
 </div>
-
-
 <!-- Calculator Internal Link Banner -->
-
 
   </main>
 
@@ -972,6 +951,7 @@
           box-sizing: border-box;
       }
   </style>
+
 <footer class="luxury-footer">
     <div class="footer-content">
         <!-- Brand Column -->
@@ -1247,6 +1227,28 @@
         }
     }
 </style>
- 
+
+<!-- Mobile Menu & Links Working Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.getElementById("mobile-menu");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                navLinks.classList.toggle("active");
+            });
+
+            const menuLinks = navLinks.querySelectorAll("a");
+            menuLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    navLinks.classList.remove("active");
+                });
+            });
+        }
+    });
+</script>
+
 </body>
 </html>
