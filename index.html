@@ -744,7 +744,8 @@
 
         .nav-links.active {
             transform: translateY(0);
-            opacity: 1;  pointer-events: auto;
+            opacity: 1;
+            pointer-events: auto;
         }
 
         .nav-links li {
@@ -1720,6 +1721,20 @@
         });
     </script>
 
+    <!-- Mobile Menu Toggle Script (Added to fix mobile menu click issue) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuBtn = document.getElementById("mobile-menu");
+            const navLinks = document.querySelector(".nav-links");
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener("click", function () {
+                    navLinks.classList.toggle("active");
+                });
+            }
+        });
+    </script>
+
 <footer class="luxury-footer">
     <div class="footer-content">
         <!-- Brand Column -->
@@ -1921,6 +1936,7 @@
 
     .footer-links li a {
         text-decoration: none;
+        file-size: 12.5px;
         font-size: 12.5px;
         font-weight: 600;
         color: #e0fbfc;
