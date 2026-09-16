@@ -2,6 +2,11 @@
 <html lang="pt-BR">
 <head>
 
+
+
+
+    
+
 <!-- favicon logo ka source code ha ye  -->
 <script src="favicon.js"></script>
 <!-- favicon logo ka source code ha ye  -->
@@ -800,7 +805,27 @@
     }
 </style>
 
+<!-- Aapke page ka baaki content aur footer yahan khatam hota hai -->
+    <footer class="luxury-header">
+       ... (Aapka footer code) ...
+    </footer>
 
+    <!-- Yeh rahi woh script jo aapko lagani hai -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuBtn = document.getElementById("mobile-menu");
+            const navLinks = document.querySelector(".nav-links");
+
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener("click", function () {
+                    navLinks.classList.toggle("active");
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
 
 
 
